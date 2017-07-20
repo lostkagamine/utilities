@@ -8,4 +8,4 @@ try:
 except KeyboardInterrupt:
     sys.stdout.flush()
     pass
-print a
+print(a)
