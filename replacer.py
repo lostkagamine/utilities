@@ -3,7 +3,7 @@ a = 0
 try:
     while True:
         stdin = sys.stdin.readline()
-        stdin.replace("a", random.choice(string.letters))
+        stdin.replace("a", random.choice(string.ascii_letters))
         print(stdin)
 except KeyboardInterrupt:
     sys.stdout.flush()
