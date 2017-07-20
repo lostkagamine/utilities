@@ -15,13 +15,13 @@ pw = raw_input("Enter a password. >")
 
 characters = string.ascii_letters + string.digits
 
-global count
 
 # if len(pw) > 3:
 #     print("Password length can't be more than 3.")
 #     sys.exit(1)
 
 def crack(pw):
+    global count
     status = "ongoing"
     count = 0
     while status == "ongoing":
