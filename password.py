@@ -15,8 +15,7 @@ pw = raw_input("Enter a password. >")
 
 characters = string.ascii_letters + string.digits
 
-guesses = []
-quota = 0
+global count
 
 # if len(pw) > 3:
 #     print("Password length can't be more than 3.")
@@ -26,7 +25,6 @@ def crack(pw):
     status = "ongoing"
     count = 0
     while status == "ongoing":
-        global count
         char = [random.choice(characters) for i in range(len(pw))]
         guess = [char[i] for i in range(len(char))]
         sguess = "".join(guess)
