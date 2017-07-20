@@ -1,9 +1,9 @@
-# The Password Brute-Forcing Machine
+# The String Brute-Forcing Machine
 # (c) ry00001/ry00000 2017 / (c) Anthony Hartup 2014
 from modules import strgen
 import sys, os, random, string
 print("""
-The Password Brute-Forcing Machine
+The String Brute-Forcing Machine
 (c) ry00001/ry00000 2017 / (c) Anthony Hartup 2014
 http://github.com/ry00000/Utilities / https://anthscomputercave.com/tutorials/code/pwc.html
 
@@ -11,13 +11,13 @@ This software is provided "as is". No warranty will be provided.
 
 TL;DR: I'm not responsible if this file messes up your computer (Which it shouldn't).
 """)
-pw = raw_input("Enter a password. >")
+pw = raw_input("Enter a string. > ")
 
 characters = string.ascii_letters + string.digits
 
 
 # if len(pw) > 3:
-#     print("Password length can't be more than 3.")
+#     print("String length can't be more than 3.")
 #     sys.exit(1)
 
 def crack(pw):
@@ -29,7 +29,7 @@ def crack(pw):
         guess = [char[i] for i in range(len(char))]
         sguess = "".join(guess)
         if sguess == pw:
-            # print("Password cracked!: ", guess, ",", pw)
+            # print("String cracked!: ", guess, ",", pw)
             status = "finished"
             count += 1
             #print(sguess)
